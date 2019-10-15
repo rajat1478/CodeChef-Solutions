@@ -1,0 +1,14 @@
+def modInverse(a, m) : 
+    a = a % m; 
+    for x in range(1, m) :                       ## cpmposite substitution cipher
+        if ((a * x) % m == 1) :                    ## codechef decipher 2019 august
+            return x 
+    return 1
+s=input()
+k=int(input())
+l=int(input())
+new=''
+for i in s:
+    if i.isupper():
+        new=new+(chr(((ord(i)-k+65)*modInverse(l,26))%26+65))
+print(new)  
