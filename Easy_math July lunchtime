@@ -1,0 +1,14 @@
+from itertools import combinations
+for i in range(int(input())):                                #### codechef  july lunchtime  problem --  Easy math 
+    int(input())
+    arr=list(map(int,input().split()))
+    p=list(combinations(arr,2))
+    l=[]
+    for i in range(len(p)):
+        k=p[i][0]*p[i][1]
+        s=0
+        while k:
+            s += k % 10
+            k //= 10
+        l.append(s)
+    print(max(l))
