@@ -1,2 +1,2 @@
 # CodeChef
-CodeChef solutions in python language
+CodeChef solutions in python lang.
